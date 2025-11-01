@@ -16,17 +16,21 @@ This project aims to practice 2D scene creation, node logic control, and signal 
 ## Project Structure project/
 ├── script/
 │ ├── play.gd # Main game logic script
-│ ├── area_2d.gd # Bird control script
-│ ├── barrier.gd # Logic for generating and moving obstacles
-│ ├── end.gd # Game over scene 
+│ ├── bird.gd # Bird Control Script
+│ ├── barrier.gd # Obstacle generation and movement logic
+│ ├── end.gd # Game Over Scene
+│
 ├── scenes/
 │ ├── play.tscn # Main game scene
-│ ├── end.tscn # Game over scene
-│ └── area_2d.tscn # Bird prefab
- ├── assets/
-│ ├── sprites/ # Image resources (background, bird, water pipe)
-│ └── sounds/ # Sound effects ├── README.md
-└── project.godot # Godot project file
+│ ├── end.tscn # Game Over Scene
+│ └── area_2d.tscn # Bird model
+│
+├── assets/
+│ ├── sprites/ 
+│ └── sounds/ 
+│
+├── README.md
+└── project.godot 
 ---
 
 ## Technical Details

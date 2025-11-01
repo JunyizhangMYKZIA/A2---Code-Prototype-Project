@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://wj2yqn60qy3d"]
+
+[ext_resource type="Texture2D" uid="uid://05w506ea87px" path="res://images/机械鸟1.png" id="1_gf172"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dl81w"]
+radius = 39.1152
+
+[node name="Area2D" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_gf172")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_dl81w")
+
+[node name="Timer" type="Timer" parent="."]

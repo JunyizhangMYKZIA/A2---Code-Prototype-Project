@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://duovi3d4co23d"]
+
+[ext_resource type="Texture2D" uid="uid://dd8d6j4f01som" path="res://images/背景.jpg" id="1_n735c"]
+[ext_resource type="Script" uid="uid://l6ijbnhph4tj" path="res://script/end.gd" id="1_rst5r"]
+
+[node name="end" type="Node2D"]
+script = ExtResource("1_rst5r")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_n735c")
+centered = false
+
+[node name="Label" type="Label" parent="."]
+offset_left = 44.0
+offset_top = 88.0
+offset_right = 375.0
+offset_bottom = 172.0
+theme_override_colors/font_color = Color(0.933672, 0.917654, 0.955303, 1)
+theme_override_colors/font_outline_color = Color(0.996731, 0.864353, 0.899356, 1)
+theme_override_font_sizes/font_size = 61
+text = "Game Over"
+
+[node name="RestartButton" type="Button" parent="."]
+offset_left = 78.0
+offset_top = 261.0
+offset_right = 333.0
+offset_bottom = 360.0
+theme_override_font_sizes/font_size = 66
+text = "Restart"

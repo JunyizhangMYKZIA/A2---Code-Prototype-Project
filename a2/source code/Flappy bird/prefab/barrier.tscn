@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://clr6tgsb1mbih"]
+
+[ext_resource type="Script" uid="uid://c6ma15qruwt40" path="res://barrier.gd" id="1_6y5mh"]
+[ext_resource type="Texture2D" uid="uid://b2nbn4uhc1vul" path="res://images/上方障碍物.png" id="1_vdbah"]
+[ext_resource type="Texture2D" uid="uid://c1dhjwdk8rijc" path="res://images/下方障碍物.png" id="2_6y5mh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1p4mg"]
+size = Vector2(89, 398.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_57kge"]
+size = Vector2(89, 400)
+
+[node name="barrier" type="Node2D"]
+script = ExtResource("1_6y5mh")
+
+[node name="top" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="top"]
+position = Vector2(50, -200)
+texture = ExtResource("1_vdbah")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="top"]
+position = Vector2(50.5, -199)
+shape = SubResource("RectangleShape2D_1p4mg")
+
+[node name="bottom" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="bottom"]
+position = Vector2(50, 200)
+texture = ExtResource("2_6y5mh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bottom"]
+position = Vector2(50, 200)
+shape = SubResource("RectangleShape2D_57kge")

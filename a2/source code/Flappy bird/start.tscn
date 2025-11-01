@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://dwhjcp38vifie"]
+
+[ext_resource type="Script" uid="uid://bn3x8ue25hjqb" path="res://script/start.gd" id="1_oiuna"]
+[ext_resource type="Texture2D" uid="uid://dd8d6j4f01som" path="res://images/背景.jpg" id="2_4a3qj"]
+[ext_resource type="Texture2D" uid="uid://05w506ea87px" path="res://images/机械鸟1.png" id="3_g38d0"]
+[ext_resource type="Texture2D" uid="uid://b2nbn4uhc1vul" path="res://images/上方障碍物.png" id="4_pob1m"]
+[ext_resource type="Texture2D" uid="uid://c1dhjwdk8rijc" path="res://images/下方障碍物.png" id="5_gophc"]
+
+[node name="start" type="Node2D"]
+script = ExtResource("1_oiuna")
+
+[node name="bg" type="Sprite2D" parent="."]
+texture = ExtResource("2_4a3qj")
+centered = false
+
+[node name="bird" type="Sprite2D" parent="bg"]
+position = Vector2(69, 97)
+texture = ExtResource("3_g38d0")
+
+[node name="barrier" type="Sprite2D" parent="bg"]
+position = Vector2(349, -2)
+texture = ExtResource("4_pob1m")
+
+[node name="barrier2" type="Sprite2D" parent="bg"]
+position = Vector2(341, 607)
+rotation = -0.0019444
+texture = ExtResource("5_gophc")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 87.0
+offset_top = 279.0
+offset_right = 332.0
+offset_bottom = 322.0
+theme_override_colors/font_color = Color(0.47044563, 1, 0.6834706, 1)
+theme_override_font_sizes/font_size = 25
+text = "Press space to start"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 73.0
+offset_top = 134.0
+offset_right = 326.0
+offset_bottom = 189.0
+theme_override_font_sizes/font_size = 40
+text = "Flapping bird"

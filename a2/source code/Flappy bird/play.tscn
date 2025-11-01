@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://cjndkgk4fnyq8"]
+
+[ext_resource type="Texture2D" uid="uid://dd8d6j4f01som" path="res://images/背景.jpg" id="1_b5e5s"]
+[ext_resource type="Script" uid="uid://biknexif4casx" path="res://play.gd" id="1_wnt6v"]
+[ext_resource type="PackedScene" uid="uid://i78ycpog2i0f" path="res://prefab/bird.tscn" id="2_yuxfv"]
+[ext_resource type="PackedScene" uid="uid://clr6tgsb1mbih" path="res://prefab/barrier.tscn" id="3_2jglr"]
+
+[node name="play" type="Node2D"]
+script = ExtResource("1_wnt6v")
+Bird = ExtResource("2_yuxfv")
+Barrier = ExtResource("3_2jglr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_b5e5s")
+centered = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_right = 125.0
+offset_bottom = 42.0
+theme_override_font_sizes/font_size = 30
+text = "score：0"
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
